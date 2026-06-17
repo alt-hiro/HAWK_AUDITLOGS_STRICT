@@ -1,0 +1,8 @@
+-- Internal stage for Snowflake ACCOUNT_USAGE audit log offloads.
+CREATE STAGE IF NOT EXISTS HAWK_AUDITLOGS_INTERNAL_STAGE
+  FILE_FORMAT = (
+    TYPE = CSV
+    FIELD_OPTIONALLY_ENCLOSED_BY = '"'
+    COMPRESSION = NONE
+    NULL_IF = ('')
+  );
